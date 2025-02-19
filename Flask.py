@@ -70,6 +70,10 @@ def download_video():
                 'ffmpeg', '-i', video_path, '-i', audio_path, '-c:v', 'libx264', '-c:a', 'aac', '-strict',
                 'experimental', '-preset', 'fast', output_path
             ])
+            #try with ffmpeg -> ffmpeg.input(video_path).input(audio_path).output(output_path, vcodec='libx264', acodec='aac', strict='experimental', preset='fast').run()
+
+            # Remove the temporary video and audio files
+            os.remove(video_path)
 
             # Remove the temporary video and audio files
             os.remove(video_path)
