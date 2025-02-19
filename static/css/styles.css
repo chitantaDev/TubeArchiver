@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #D1BAB9FF;
+    padding: 7px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.navbar .left {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    color: #FFF5DA;
+}
+
+.navbar a {
+    color: #FFF5DA;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 5px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #5D534A;
+    border-radius: 8px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    color: #3A3A3AFF;
+}
+
+.title {
+    color: #3A3A3AFF;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(37, 37, 37, 0.2);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    margin-top: -200px;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+.input-container, .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-container input {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    color: black !important;
+}
+
+.button-container button {
+    background-color: #5D534A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.spinner {
+    display: none;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #5D534A;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

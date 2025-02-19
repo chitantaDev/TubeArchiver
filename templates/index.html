@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubeArchive</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mui/material@5.11.4/dist/material.min.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/" class="left">
+              <img src="../static/images/icons8-flower-50.png" style="height: 20px; padding-right: 10px; color: white">
+            TubeArchive
+        </a>
+        <div>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <h1 class="title">TubeArchive</h1>
+            <div class="input-container">
+                <input
+                    type="text"
+                    id="video-url"
+                    class="MuiInputBase-input"
+                    placeholder="Enter Channel URL"
+                >
+            </div>
+            <div class="button-container">
+                <button id="download-btn">Download</button>
+            </div>
+            <div class="spinner" id="spinner"></div>
+            <p id="message" class="message"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mui/material@5.11.4/dist/material.min.js"></script>
+    <script src="../static/js/VideoDownloader.js"></script>
+    <script>
+        document.getElementById("download-btn").addEventListener("click", () => {
+            const downloader = new VideoDownloader('video-url', 'spinner', 'message');
+            downloader.downloadVideo();
+        });
+    </script>
+</body>
+</html>
